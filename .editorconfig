@@ -1,0 +1,87 @@
+# ============================================================================
+# HyperPanel EditorConfig
+# ============================================================================
+# This file ensures consistent coding styles across the project.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.go]
+indent_style = tab
+indent_size = 4
+
+[*.{ts,tsx,js,jsx,json,yaml,yml}]
+indent_style = space
+indent_size = 2
+
+[*.{css,scss}]
+indent_style = space
+indent_size = 2
+
+[*.{html}]
+indent_style = space
+indent_size = 2
+
+[Dockerfile]
+indent_style = space
+indent_size = 2
+
+[Makefile]
+indent_style = tab
+
+[*.sql]
+indent_style = space
+indent_size = 2
+
+[*.sh]
+indent_style = space
+indent_size = 2
+
+[*.env]
+trim_trailing_whitespace = false
+
+[*.example]
+trim_trailing_whitespace = false
+
+[LICENSE]
+insert_final_newline = true
+
+[README.md]
+trim_trailing_whitespace = false
+
+[docs/**]
+trim_trailing_whitespace = false
+
+[scripts/**]
+indent_style = space
+indent_size = 2
+
+[apps/**]
+indent_style = space
+indent_size = 2
+
+[packages/**]
+indent_style = space
+indent_size = 2
+
+[database/**]
+indent_style = space
+indent_size = 2
+
+[docker/**]
+indent_style = space
+indent_size = 2
+
+[nginx/**]
+indent_style = space
+indent_size = 2
