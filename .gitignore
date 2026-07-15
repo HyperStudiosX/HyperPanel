@@ -1,0 +1,131 @@
+# -----------------------------------------------------------------------------
+# HyperPanel
+# Git Ignore Configuration
+# -----------------------------------------------------------------------------
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency folders
+node_modules/
+.pnpm-store/
+
+# Turbo
+.turbo/
+
+# Next.js
+.next/
+out/
+
+# NestJS
+dist/
+
+# Build outputs
+build/
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Docker
+docker-data/
+docker-volumes/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Prisma
+prisma/dev.db
+
+# Uploads
+uploads/
+temp/
+tmp/
+cache/
+
+# Backups
+backups/
+backup/
+
+# Certificates
+ssl/
+certs/
+*.pem
+*.key
+*.crt
+
+# Redis
+dump.rdb
+
+# PostgreSQL
+postgres-data/
+
+# Nginx
+nginx/logs/
+
+# PM2
+.pm2/
+
+# Go
+bin/
+*.exe
+*.test
+vendor/
+
+# Rust
+target/
+
+# Python
+__pycache__/
+*.pyc
+
+# Java
+*.class
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Generated documentation
+docs/build/
+
+# Misc
+*.swp
+*.swo
+*.bak
+*.old
+*.orig
+
+# Local settings
+.local/
