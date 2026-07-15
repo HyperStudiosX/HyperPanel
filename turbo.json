@@ -1,0 +1,129 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+
+  "globalDependencies": [
+    "**/.env",
+    "**/.env.local",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "turbo.json"
+  ],
+
+  "globalEnv": [
+    "NODE_ENV",
+    "DATABASE_URL",
+    "REDIS_URL",
+    "JWT_SECRET",
+    "JWT_REFRESH_SECRET",
+    "SESSION_SECRET",
+    "PANEL_URL",
+    "API_URL",
+    "AGENT_SECRET",
+    "DOCKER_HOST",
+    "CLOUDFLARE_API_TOKEN",
+    "CLOUDFLARE_ACCOUNT_ID",
+    "CLOUDFLARE_ZONE_ID",
+    "DISCORD_CLIENT_ID",
+    "DISCORD_CLIENT_SECRET",
+    "GOOGLE_CLIENT_ID",
+    "GOOGLE_CLIENT_SECRET",
+    "SMTP_HOST",
+    "SMTP_PORT",
+    "SMTP_USER",
+    "SMTP_PASSWORD",
+    "STRIPE_SECRET_KEY",
+    "STRIPE_WEBHOOK_SECRET",
+    "RAZORPAY_KEY_ID",
+    "RAZORPAY_KEY_SECRET",
+    "AWS_ACCESS_KEY_ID",
+    "AWS_SECRET_ACCESS_KEY",
+    "AWS_REGION",
+    "AWS_BUCKET",
+    "S3_ENDPOINT",
+    "LOG_LEVEL"
+  ],
+
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        ".next/**",
+        "dist/**",
+        "build/**",
+        "coverage/**"
+      ]
+    },
+
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+
+    "start": {
+      "cache": false,
+      "persistent": true
+    },
+
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ],
+      "outputs": []
+    },
+
+    "typecheck": {
+      "dependsOn": [
+        "^typecheck"
+      ],
+      "outputs": []
+    },
+
+    "test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
+    },
+
+    "clean": {
+      "cache": false
+    },
+
+    "generate": {
+      "cache": false
+    },
+
+    "prisma:generate": {
+      "cache": false
+    },
+
+    "prisma:migrate": {
+      "cache": false
+    },
+
+    "docker:build": {
+      "cache": false
+    },
+
+    "docker:up": {
+      "cache": false
+    },
+
+    "docker:down": {
+      "cache": false
+    },
+
+    "seed": {
+      "cache": false
+    }
+  }
+}
