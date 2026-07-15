@@ -1,0 +1,75 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+onlyBuiltDependencies:
+  - "@nestjs/core"
+  - "@prisma/client"
+  - "esbuild"
+  - "sharp"
+  - "sqlite3"
+  - "bcrypt"
+  - "argon2"
+
+catalog:
+  typescript: ^5.9.2
+  eslint: ^9.34.0
+  prettier: ^3.6.2
+  turbo: ^2.5.6
+
+linkWorkspacePackages: true
+
+preferWorkspacePackages: true
+
+sharedWorkspaceLockfile: true
+
+saveWorkspaceProtocol: rolling
+
+strictPeerDependencies: false
+
+autoInstallPeers: true
+
+gitChecks: true
+
+shellEmulator: true
+
+resolutionMode: highest
+
+useNodeVersion: "22.18.0"
+
+minimumReleaseAge: 0
+
+peerDependencyRules:
+  ignoreMissing:
+    - "@types/node"
+    - "typescript"
+    - "eslint"
+
+neverBuiltDependencies: []
+
+publicHoistPattern:
+  - "*eslint*"
+  - "*prettier*"
+  - "*typescript*"
+
+hoistPattern:
+  - "*"
+
+packagesMeta:
+  "@hyperpanel/ui":
+    injected: true
+
+  "@hyperpanel/shared":
+    injected: true
+
+  "@hyperpanel/types":
+    injected: true
+
+  "@hyperpanel/config":
+    injected: true
+
+  "@hyperpanel/utils":
+    injected: true
+
+  "@hyperpanel/sdk":
+    injected: true
