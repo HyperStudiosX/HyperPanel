@@ -1,0 +1,78 @@
+{
+  "name": "hyperpanel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HyperPanel - Enterprise Game Server Hosting Panel",
+  "author": "HyperForge",
+  "license": "MIT",
+
+  "packageManager": "pnpm@10.15.0",
+
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+
+  "scripts": {
+    "dev": "turbo run dev",
+
+    "build": "turbo run build",
+
+    "start": "turbo run start",
+
+    "lint": "turbo run lint",
+
+    "format": "prettier --write .",
+
+    "typecheck": "turbo run typecheck",
+
+    "clean": "turbo run clean",
+
+    "prepare": "husky",
+
+    "docker:up": "docker compose up -d",
+
+    "docker:down": "docker compose down",
+
+    "docker:logs": "docker compose logs -f",
+
+    "db:migrate": "pnpm --filter api prisma migrate dev",
+
+    "db:deploy": "pnpm --filter api prisma migrate deploy",
+
+    "db:studio": "pnpm --filter api prisma studio",
+
+    "db:seed": "pnpm --filter api prisma db seed",
+
+    "panel": "pnpm --filter panel dev",
+
+    "api": "pnpm --filter api start:dev",
+
+    "agent": "pnpm --filter agent dev",
+
+    "installer": "pnpm --filter installer dev"
+  },
+
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@types/node": "^24.3.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.6",
+    "typescript": "^5.9.2"
+  },
+
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,md}": [
+      "prettier --write"
+    ]
+  }
+}
